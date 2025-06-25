@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000
 app.use(cors())
 
 app.get("/dolar", async (req, res) =>{
+    res.send("🟢 API del dólar en Argentina. Usá /dolar para ver las cotizaciones.")
     try{
         const { data } = await axios.get("https://dolarapi.com/v1/dolares")
 
